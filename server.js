@@ -2,7 +2,6 @@ import express from 'express';
 import playstore from 'google-play-scraper';
 
 const app = express();
-const PORT = 3000;
 
 app.get('/app-version', async (req, res) => {
     try {
@@ -13,6 +12,4 @@ app.get('/app-version', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+export default app;
